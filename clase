@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void Mostrar(int [][3], int, int);
+
+int main(){
+    int mat[2][3], f, c, cont=1;
+    for(f=0;f<2;f++)
+        for(c=0;c<3;c++){
+            mat[f][c]=cont++;
+        }
+    Mostrar(mat, 2, 3);
+    printf("\n");
+    system("pause");
+    return 0;
+}
+
+void Mostrar(int m[][3], int cf, int cc){
+    int f, c=0;
+    for(f=0;f<cf;f++){
+        printf("fila %d ", f+1);
+        for(c=0;c<cc;c++){
+            printf("%5d", m[f][c]);
+        }
+        printf("\n");
+    }
+}
